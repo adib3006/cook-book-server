@@ -74,7 +74,24 @@ async function run(){
             const query = {_id : ObjectId(id)};
             const result = await reviewCollection.deleteOne(query);
             res.send(result);
-        })
+        });
+
+        app.get('/myreviews/:id', async (req,res)=>{
+            const id = req.params.id;
+            const query = {_id : ObjectId(id)};
+            const result = await reviewCollection.findOne(query);
+            res.send(result);
+        });
+
+        app.patch('/myreviews/:id', async (req,res)=>{
+            const id = req.params.id;
+            const query = {_id : ObjectId(id)};
+            const updatedReview = {
+                $set: req.body
+            }
+            const result = await reviewCollection.updateOne(query,updatedReview);
+            res.send(result);
+        });
     }
     finally{
 
