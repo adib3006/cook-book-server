@@ -1,0 +1,50 @@
+[
+    {
+        "item_id": "04",
+        "title": "Pizza",
+        "img": "https://i.ibb.co/MBP0vM2/pizza.jpg",
+        "ratings": "5",
+        "price": "20.00",
+        "description": "pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot."
+    },
+    {
+        "item_id": "05",
+        "title": "Burger",
+        "img": "https://i.ibb.co/vmNCCSH/burger.jpg",
+        "ratings": "5",
+        "price": "20.00",
+        "description": "hamburger, also called burger, ground beef. The term is applied variously to (1) a patty of ground beef, sometimes called hamburg steak, Salisbury steak, or Vienna steak, (2) a sandwich consisting of a patty of ground beef served within a split bread roll, with various garnishes, or (3) the ground beef itself, which is used as a base in many sauces, casseroles, terrines, and the like."
+    },
+    {
+        "item_id": "01",
+        "title": "Tacos",
+        "img": "https://i.ibb.co/1dYMsMD/tacos.jpg",
+        "ratings": "4",
+        "price": "40.00",
+        "description": "A taco is a traditional Mexican food consisting of a small hand-sized corn- or wheat-based tortilla topped with a filling. The tortilla is then folded around the filling and eaten by hand. A taco can be made with a variety of fillings, including beef, pork, chicken, seafood, beans, vegetables, and cheese, allowing for great versatility and variety. They are often garnished with various condiments, such as salsa, guacamole, or sour cream, and vegetables, such as lettuce, onion, tomatoes, and chiles. Tacos are a common form of antojitos, or Mexican street food, which have spread around the world."
+    },
+    {
+        "item_id": "02",
+        "title": "Fried Chicken",
+        "img": "https://i.ibb.co/8jmF9pD/chicken.jpg",
+        "ratings": "4.5",
+        "price": "50.00",
+        "description": "Fried chicken has been described as being crunchy and juicy, as well as crispy. The dish has also been called spicy and salty. Occasionally, fried chicken is also topped with chili like paprika, or hot sauce to give it a spicy taste. This is especially common in fast food restaurant chains such as KFC. The dish is traditionally served with mashed potatoes, gravy, macaroni and cheese, coleslaw, corn or biscuits. Out of the various parts of the animal used in fried chicken, the wings generally tend to contain the most fat, with almost 40 grams (1.4 oz) of fat for every 100 grams (3.5 oz). However, the average whole fried chicken contains only around 12% fat, or 12 grams (0.42 oz) per every 100 grams (3.5 oz). 100 grams (3.5 oz) of fried chicken generally contains around 240 calories of energy."
+    },
+    {
+        "item_id": "03",
+        "title": "Steak",
+        "img": "https://i.ibb.co/bRM2hkL/steak.jpg",
+        "ratings": "5",
+        "price": "30.00",
+        "description": "Beef steaks are commonly grilled or fried. Grilled beef steaks can be cooked at different temperatures, or for different lengths of time; the resulting cooked steak ranges from blue (very rare) to overdone. The most common characteristics of a rare steak is a soft, cold, red center. The outside is seared for flavor, while the inside is cooked to suit the diner's preference. Steaks cooked well done are usually cooked throughout the entire cut of meat. For example, a beefsteak cooked well done will not have any pinkness in the middle when sliced. Uncooked beef steak can be served raw, such as in steak tartare."
+    },
+    {
+        "item_id": "06",
+        "title": "Family Combo",
+        "img": "https://i.ibb.co/WH7Vq6F/slide1.jpg",
+        "ratings": "5",
+        "price": "20.00",
+        "description": "A combo meal is defined as meal that is a composite or a combination of three different aspects of a fast food meal namely; French fries, a larger bugger and a soft drink. The major attraction for this offering of a combo meal is the fact that it offers the attractions of a complete course of meals as well as meeting the dietary needs of the consumer. The combination or combo meal comes at the one price and as a single offering. These foods are said to be delicious and clean besides being availed to you fast enough. The consumption of these combination meals has gone up significantly in the recent past and has made a rave among the consumers."
+    }
+]
