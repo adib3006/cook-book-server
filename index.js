@@ -39,6 +39,12 @@ async function run(){
             const query = {_id:ObjectId(id)};
             const item = await menuCollection.findOne(query);
             res.send(item);
+        });
+
+        app.post('/menu',async (req,res)=>{
+            const item = req.body;
+            const result = await menuCollection.insertOne(item);
+            res.send(result);
         })
     }
     finally{
