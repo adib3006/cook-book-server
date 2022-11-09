@@ -18,7 +18,8 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run(){
     try{
-        const menuCollection = client.db('cookBook').collection('menu');
+        const menuCollection = client.db('cookBook').collection('menu');        
+        const reviewCollection = client.db('cookBook').collection('reviews');        
 
         app.get('/home',async (req,res)=>{
             const query = {};
@@ -37,15 +38,24 @@ async function run(){
         app.get('/menu/:id',async (req,res)=>{
             const id = req.params.id;
             const query = {_id:ObjectId(id)};
+            const query1 = {item_id:id}
             const item = await menuCollection.findOne(query);
-            res.send(item);
+            const cursor = reviewCollection.find(query1);
+            const reviews = await cursor.toArray();
+            res.send({item,reviews});
         });
 
         app.post('/menu',async (req,res)=>{
             const item = req.body;
             const result = await menuCollection.insertOne(item);
             res.send(result);
-        })
+        });
+
+        app.post('/menu/:id',async (req,res)=>{
+            const review = req.body;
+            const result = await reviewCollection.insertOne(review);
+            res.send(result);
+        });
     }
     finally{
 
