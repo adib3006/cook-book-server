@@ -3,17 +3,14 @@ const cors = require('cors');
 const { MongoClient, ServerApiVersion,ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 require('colors');
+require('dotenv').config();
 //const menu = require('./data/menu.json');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// lDD14AMf3Qh3T2Nt
-// cookBookUser
-
-
-const uri = "mongodb+srv://cookBookUser:lDD14AMf3Qh3T2Nt@cluster0.5voiazn.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.5voiazn.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run(){
@@ -24,7 +21,7 @@ async function run(){
         app.get('/home',async (req,res)=>{
             const query = {};
             const cursor = menuCollection.find(query);
-            const menu =await cursor.limit(3).toArray();
+            const menu =await cursor.sort({_id:-1}).limit(3).toArray();
             res.send(menu);
         });
 
