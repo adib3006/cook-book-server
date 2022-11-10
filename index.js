@@ -4,7 +4,6 @@ const { MongoClient, ServerApiVersion,ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 require('colors');
 require('dotenv').config();
-//const menu = require('./data/menu.json');
 
 const app = express();
 app.use(cors());
@@ -38,7 +37,7 @@ async function run(){
             const query1 = {item_id:id}
             const item = await menuCollection.findOne(query);
             const cursor = reviewCollection.find(query1);
-            const reviews = await cursor.toArray();
+            const reviews = await cursor.sort({releaseDate:-1}).toArray();
             res.send({item,reviews});
         });
 
@@ -50,7 +49,9 @@ async function run(){
 
         app.post('/menu/:id',async (req,res)=>{
             const review = req.body;
-            const result = await reviewCollection.insertOne(review);
+            const releaseDate = new Date();
+            const reviewWithDate = {...review,releaseDate};
+            const result = await reviewCollection.insertOne(reviewWithDate);
             res.send(result);
         });
 
